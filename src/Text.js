@@ -9,9 +9,9 @@ const Title = styled.span`
   margin: 10px;
 `;
 
-const App = () => {
+const Text = () => {
   const [text] = useRecoilState(textState);
   return <Title>{text}</Title>;
 };
 
-export default App;
+export default Text;
