@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Text from "./Text";
 import Counter from "./Counter";
-import { atom, useRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
+import { textState } from "./Store";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -19,11 +20,6 @@ const Title = styled.span`
   font-weight: bold;
   margin-top: 120px;
 `;
-
-const textState = atom({
-  key: "textState", // unique ID (with respect to other atoms/selectors)
-  default: "Recoil", // default value (aka initial value)
-});
 
 function App() {
   const [text, setText] = useRecoilState(textState);
