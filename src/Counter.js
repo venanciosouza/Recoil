@@ -9,9 +9,9 @@ const Text = styled.span`
   margin: 10px;
 `;
 
-function Counter() {
+const Counter = () => {
   const count = useRecoilValue(charCountState);
-  return <Text>Count: {count}</Text>;
-}
+  return <Text>counter: {count}</Text>;
+};
 
 export default Counter;

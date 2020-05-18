@@ -21,7 +21,7 @@ const Title = styled.span`
   margin-top: 120px;
 `;
 
-function App() {
+const App = () => {
   const [text, setText] = useRecoilState(textState);
   return (
     <Wrapper>
@@ -31,10 +31,11 @@ function App() {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        placeholder="enter a value"
       />
       <Counter />
     </Wrapper>
   );
-}
+};
 
 export default App;
